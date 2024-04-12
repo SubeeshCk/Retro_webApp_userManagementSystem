@@ -1,0 +1,132 @@
+ /**login page**/
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),url('./assets/back_img.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 765px;
+}
+
+.center-div{
+    padding: 6% 0; 
+}
+
+.center-div h1{
+    color: rgb(170, 15, 15);
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 992px) {
+    .center-div .container{
+        width: 35%;
+        border: 2px solid grey;
+        border-radius: 10px;
+    }
+
+    .cont-box{
+        background-color: rgba(0, 0, 0, 0.658);
+    } 
+}
+
+.btn.btn-success{
+    padding: .6em 2em;
+    margin: 2em 2em;
+}
+
+.form-control{
+    margin-bottom: 1em;
+}
+
+.title span{
+    font-size: 1em;
+}
+
+.center-div a{ 
+    color: #fff;
+       
+}
+/**Home page**/
+
+.navbar-brand h1{
+    color: rgb(170, 14, 14);
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 4em;
+}
+
+.navbar-arrange{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
+    background-color:white;
+}
+
+.navbar-brand{
+    margin-right: 6em;
+}
+
+.navbar-nav{
+    font-size: 1.3em;
+    font-weight:600;
+}
+
+.btn-danger a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.user-logout{
+    margin-bottom: 3em;
+}
+
+/**content-section**/
+
+.content-section{
+    text-align:left;
+    padding: 10% 0;
+    border-top: 8px solid #3d3d3d;
+}
+
+.content-section h1{
+    color: rgb(170, 6, 6);
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.content-text{
+    background-color: rgba(0, 0, 0, 0.719);
+    border-radius: 10px;
+    font-size: 1.2em;
+    padding: 4%;
+    color: lightgray;
+    border: solid darkred 1px;
+}
+
+/*footer*/
+
+footer{
+     color: #fff;
+     padding: 50px 0;
+     background-color: rgba(0, 0, 0, 0.363);
+     border-top:solid grey 2px;
+}
+
+.list-foot a{
+    color: #fff;
+    font-size: 13px;
+}
+
+.list-foot li{
+    list-style: none;
+    line-height: 35px;
+    font-size: 13px;
+}

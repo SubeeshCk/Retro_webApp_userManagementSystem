@@ -1,0 +1,47 @@
+<%- include('../layouts/header.ejs') -%>
+
+<div class="text-center center-div col-sm-12" id="login">
+    <h1>Retro</h1>
+    <div class="container cont-box py-5">
+        <div class="title text-white pb-5">
+            <h2 class="font-weight-bold">Create new user</h2>
+            <% if(locals.failMsg) { %>
+             <div class="alert alert-succes text-center text-danger">
+                <h5><%= failMsg %></h5>
+             </div>
+            <% } %>
+        </div>
+        <form method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Enter name" name="name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Enter email" name="email" required>
+            </div>
+            <div class="form-group">
+                <input type="mobile" class="form-control" placeholder="Enter mobile number" name="mobile" required>
+            </div>
+            <div class="form-group">
+                <input type="file" class="form-control" name="image" required>
+            </div>
+            <button type="submit" value="Register" class="btn btn-success rounded-pill">Submit</button>
+        </form>
+        <a href="/admin/dashboard">Go back to User data</a>
+    </div>
+</div>
+<script>
+    function validateForm() {
+      var email = document.querySelector('input[name="email"]').value;
+      var emailRegex = /^\S+@\S+\.\S+$/;
+  
+      // Check if email is valid
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+      }
+      return true; // Form data is valid
+    }
+  </script>
+  
+
+<%- include('../layouts/footer.ejs') -%>

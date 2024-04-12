@@ -1,0 +1,30 @@
+<%- include('../layouts/header.ejs')-%>
+
+<div class="text-center center-div col-sm-12" id="login">
+    <h1>Retro</h1>
+    <div class="container cont-box py-5">
+        <div class="title text-white pb-5">
+            <h3 class="font-weight-bold">Edit user</h3>
+            <% if (locals.FailMessage) { %>
+                <div class="alert alert-succes text-center text-danger">
+                    <h5><%= FailMessage %></h5>
+                </div>
+            <% } %>
+        </div>
+        <form action="/admin/edit-user" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" value="<%= user.name %>" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" value="<%= user.email %>" required>
+            </div>
+            <div class="form-group">
+                <input type="mobile" class="form-control" name="mobile" value="<%= user.mobile %>" required>
+            </div> 
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <button type="submit" class="btn btn-success rounded-pill">Update user</button>
+        </form>
+    </div>
+</div>
+
+<%- include('../layouts/footer.ejs')-%>

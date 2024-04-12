@@ -1,0 +1,25 @@
+<%- include('../layouts/header.ejs')-%>
+
+<div class="text-center center-div col-sm-12" id="login">
+    <h1>Retro</h1>
+    <div class="container cont-box py-5">
+        <div class="title text-white pb-5">
+            <h2 class="font-weight-bold">Forgot password</h2>
+            <% if(locals.Message) { %>
+             <div class="alert alert-succes text-center text-success">
+                <h5><%= Message %></h5>
+             </div>
+            <% } %>
+        </div>
+        <form action="/forgot" method="post">
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" name="email" required>
+            </div>
+            <button type="submit" class="btn btn-success rounded-pill" value="Sent Reset Link">Send reset link</button>
+        </form>
+    </div>
+</div>
+
+<%- include('../layouts/footer.ejs')-%>
+
+

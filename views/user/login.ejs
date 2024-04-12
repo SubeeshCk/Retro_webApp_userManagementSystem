@@ -1,0 +1,48 @@
+<%- include('../layouts/header.ejs')-%>
+
+<div class="text-center center-div col-sm-12" id="login">
+    <h1>Retro</h1>
+    <div class="container cont-box py-5">
+        <div class="title text-white pb-5">
+            <h2 class="font-weight-bold">Login</h2>
+            <span>Login for the existing user</span>
+            <% if (locals.FailMessage) { %>
+            <div class="alert alert-succes text-center text-danger">
+                <h5><%= FailMessage %></h5>
+             </div>
+             <% } %>
+            <% if(locals.successMessage) { %>
+             <div class="alert alert-succes text-center text-success">
+                <h5><%= successMessage %></h5>
+             </div>
+            <% } %>
+        </div>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" name="email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+        </form>
+        <div>
+            <a href="/signup">Not a User? Sign up</a>
+        </div>
+        <div>
+            <a href="/forgot">Forgotten password?</a>
+        </div>
+        <div>
+            <a href="/mailVerification">Email verification</a>
+        </div>
+        <div>
+            <a href="admin/login">Admin login</a>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('../layouts/footer.ejs')-%>
+
+
